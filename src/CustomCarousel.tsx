@@ -7,11 +7,10 @@ import React, {
 import {
   Animated,
   Dimensions,
-  View,
+  View,FlatList,
   NativeSyntheticEvent,
   NativeScrollEvent,
 } from "react-native";
-import { FlatList } from "react-native-gesture-handler";
 import { CustomCarouselProps, RefProps } from "./Interfaces";
 import PressablePagination from "./PressablePagination/PressablePagination";
 
