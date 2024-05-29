@@ -30,7 +30,7 @@ const buttonStyle = (
     width: indicatorWidth,
     height: indicatorHeight,
     borderRadius,
-    marginHorizontal: 3,
+    // marginHorizontal: 3,
     backgroundColor,
   };
 };
