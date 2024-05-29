@@ -32,6 +32,8 @@ const buttonStyle = (
     borderRadius,
     // marginHorizontal: 3,
     backgroundColor,
+alignItems:'center',
+justifyContent:'center',
   };
 };
 
