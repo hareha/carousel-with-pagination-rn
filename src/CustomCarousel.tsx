@@ -81,21 +81,6 @@ const CustomCarousel = forwardRef<RefProps, CustomCarouselProps>(
         style={[{ flexGrow: 0 }, props.mainContainerStyle]}
         testID="content-container"
       >
-        <FlatList
-          ref={flatlistRef}
-          data={props.data}
-          renderItem={props.renderItem}
-          style={[{ flexGrow: 0 }, props.carouselContainerStyle]}
-          contentContainerStyle={props.carouselContentContainerStyle}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          pagingEnabled
-          snapToAlignment="center"
-          onScroll={handleScroll}
-          viewabilityConfig={viewabilityConfig}
-          onViewableItemsChanged={onViewableItemsChanged}
-          onEndReached={endReached}
-        />
         {!disablePagination && (
           <View
             style={props.paginationContainerStyle}
@@ -120,6 +105,22 @@ const CustomCarousel = forwardRef<RefProps, CustomCarouselProps>(
             />
           </View>
         )}
+        <FlatList
+          ref={flatlistRef}
+          data={props.data}
+          renderItem={props.renderItem}
+          style={[{ flexGrow: 0 }, props.carouselContainerStyle]}
+          contentContainerStyle={props.carouselContentContainerStyle}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+          snapToAlignment="center"
+          onScroll={handleScroll}
+          viewabilityConfig={viewabilityConfig}
+          onViewableItemsChanged={onViewableItemsChanged}
+          onEndReached={endReached}
+        />
+        
       </View>
     );
   }
